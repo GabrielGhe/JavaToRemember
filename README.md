@@ -6,8 +6,8 @@ Things to remember for interviews
 Taken from here... <a>http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/</a>
 
 <h3>Table of content</h3>
-<ul id="tableOfContent">
-  <li><a onclick="alert('hi');window.location.href = '#string';">String</a></li>
+<ul>
+  <li>String</li>
   <li>Linked List</li>
   <li>Tree</li>
   <li>Graph</li>
@@ -19,7 +19,7 @@ Taken from here... <a>http://www.programcreek.com/2012/11/top-10-algorithms-for-
   <li>Combinations and Permutations</li>
 </ul>
 
-<h3 id="string">String</h3>
+<h3>String</h3>
 <pre>
 toCharyArray()                //get char array of a String
 Arrays.sort()                 //sort an array
