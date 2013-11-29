@@ -7,7 +7,7 @@ Taken from here... <a>http://www.programcreek.com/2012/11/top-10-algorithms-for-
 
 <h3>Table of content</h3>
 <ul id="tableOfContent">
-  <li><a onclick="window.location.href = '#string';">String</a></li>
+  <li><a onclick="alert('hi');window.location.href = '#string';">String</a></li>
   <li>Linked List</li>
   <li>Tree</li>
   <li>Graph</li>
