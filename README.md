@@ -12,12 +12,19 @@ Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-
   <li><a href="#4-graph">Graph</a></li>
   <li><a href="#5-sorting">Sorting</a></li>
   <li><a href="#6-recursion-and-iteration">Recursion and iteration</a></li>
-  <li><a href="#7-dynamin-programming">Dynamic Programming</a></li>
+  <li><a href="#7-dynamic-programming">Dynamic Programming</a></li>
   <li><a href="#8-bit-manipulation">Bit Manipulation</a></li>
   <li><a href="#9-probability">Probability</a></li>
   <li><a href="#10-combinations-and-permutations">Combinations and Permutations</a></li>
 </ol>
 
+<!-- 
+#########################################
+#										#
+#				String					#
+#										#
+#########################################
+-->
 <h3 id="string"><a href="#table-of-content">1. String</a></h3>
 ```java
 toCharyArray()                //get char array of a String
@@ -28,6 +35,13 @@ length()                      //string length
 length                        //array size
 ```
 
+<!-- 
+#########################################
+#										#
+#			Linked list					#
+#										#
+#########################################
+-->
 <h3><a href="#table-of-content">2. Linked List</a></h3>
 
 <p>The node class which is the "element" of a linked list</p>
@@ -127,6 +141,13 @@ class Queue {
 }
 ```
 
+<!-- 
+#########################################
+#										#
+#				Tree					#
+#										#
+#########################################
+-->
 <h3><a href="#table-of-content">3. Tree</a></h3>
 <p>The tree class here is for the binary tree</p>
 
@@ -148,6 +169,13 @@ class TreeNode {
 </ol>
 
 
+<!-- 
+#########################################
+#										#
+#				Graph					#
+#										#
+#########################################
+-->
 <h3><a href="#table-of-content">4. Graph</a></h3>
 <p>Graphs are use for many things, such as Netorking and games for example.The 2 most famous algorithms for graphs are Depth First Search and Breath First Search</p>
 
@@ -184,6 +212,14 @@ class GraphNode{
 }
 ```
 
+
+<!-- 
+#########################################
+#										#
+#				SORTING					#
+#										#
+#########################################
+-->
 <h3><a href="#table-of-content">5. Sorting</a></h3>
 <p>Here is a table of comparison sorting algorithms and their time complexity</p>
 
@@ -264,6 +300,14 @@ class GraphNode{
 	</tr>
 </table>
 
+
+<!-- 
+#########################################
+#										#
+#		Recursion and Iteration			#
+#										#
+#########################################
+-->
 <h3><a href="#table-of-content">6. Recursion and Iteration</a></h3>
 <p>Recursion is easy to understand and implement. However, it's worse than iteration and can cause stackoverflows</p>
 
@@ -297,11 +341,9 @@ public static int fib(int n){
 <p>Fibonacci using iteration</p>
 ```java
 public static int fib(int n) {
- 
 	if (n <= 1){
 		return n;
 	}
- 
 	int current = 1;
 	int prev = 0;
 	int temp = 0;
@@ -311,8 +353,140 @@ public static int fib(int n) {
 		prev = current;			//old current is now prev
 		current = temp;			//current is temp
 	}
- 
 	return current;
 }
 ```
+
+<!-- 
+#########################################
+#										#
+#		DYNAMIC PROGRAMMING				#
+#										#
+#########################################
+-->
+<h3><a href="#table-of-content">7. Dynamic programming</a></h3>
+<p>Dynamic programming is a technique for solving problems with the following properties:</p>
+
+<ol>
+	<li>An instance is solved using the solutions for smaller instances.</li>
+	<li>The solution for a smaller instance might be needed multiple times.</li>
+	<li>The solutions to smaller instances are stored in a table, so that each smaller instance is solved only once.</li>
+	<li>Additional space is used to save time.</li>
+</ol>
+<p>The problem of climbing steps perfectly fit those 4 properties. Therefore, it can be solve by using dynamic programming.</p>
+
+```java
+public static int[] Steps = new int[100];
+ 
+public static int f3(int n) {
+	if (n <= 2)
+		A[n]= n;
+ 
+	if(A[n] > 0)
+		return A[n];
+	else
+		A[n] = f3(n-1) + f3(n-2);	//store results so only calculate once!
+	return A[n];
+}
+```
+
+
+<!-- 
+#########################################
+#										#
+#			Bit Manipulation			#
+#										#
+#########################################
+-->
+<h3><a href="#table-of-content">8. Bit Manipulation</a></h3>
+<p>Bit operators</p>
+
+<table>
+	<!-- Header -->
+	<tr>
+		<td>Operation name</td>
+		<td>Java symbol</td>
+		<td>Example</td>
+		<td>Result</td>
+		<td>Explanation</td>
+	</tr>
+	<!-- Row 1 -->
+	<tr>
+		<td>AND</td>
+		<td>&</td>
+		<td>7 & 5</td>
+		<td>5</td>
+		<td>111 & 101 = 101</td>
+	</tr>
+	<!-- Row 2 -->
+	<tr>
+		<td>OR</td>
+		<td>|</td>
+		<td>8 | 3</td>
+		<td>11</td>
+		<td>1000 | 0011 = 1011</td>
+	</tr>
+	<!-- Row 3 -->
+	<tr>
+		<td>XOR</td>
+		<td>^</td>
+		<td>15 ^ 5</td>
+		<td>10</td>
+		<td>1111 ^ 0101 = 1010</td>
+	</tr>
+	<!-- Row 5 -->
+	<tr>
+		<td>Right Shift</td>
+		<td>>></td>
+		<td>7 >> 1</td>
+		<td>3</td>
+		<td>111 >> 1 = 011</td>
+	</tr>
+	<!-- Row 6 -->
+	<tr>
+		<td>Not</td>
+		<td>~</td>
+		<td>~0</td>
+		<td>-1</td>
+		<td>~000 = 111 which is 2's complement -1</td>
+	</tr>
+</table>
+
+
+<!-- 
+#########################################
+#										#
+#			Probability					#
+#										#
+#########################################
+-->
+<h3><a href="#table-of-content">9. Probability</a></h3>
+<p>There are 50 people in a room, what’s the probability that two people have the same birthday? (Ignoring the fact of leap year, i.e., 365 day every year)</p>
+
+```java
+public static double caculateProbability(int n){
+	double x = 1; 
+ 
+	for(int i=0; i<n; i++){
+		x *=  (365.0-i)/365.0;
+	}
+ 
+	double pro = Math.round((1-x) * 100);
+	return pro/100;
+}
+```
+
+<!-- 
+#########################################
+#										#
+#			Probability					#
+#										#
+#########################################
+-->
+<h3><a href="#table-of-content">10. Combinations and Permutations</a></h3>
+<ul>
+	<li>If the order doesn't matter, it is a Combination... 1234 same as 4321</li>
+	<li>If the order matters, it is a Permutation... 1234 != 2134</li>
+</ul>
+
 
