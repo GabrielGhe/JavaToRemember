@@ -257,10 +257,62 @@ class GraphNode{
 	</tr>
 	<tr>
 		<td>Radix sort</td>
-		<td>n + N</td>
+		<td>n</td>
 		<td>m(n + N)</td>
 		<td></td>
 		<td>m is the number of keys</td>
 	</tr>
 </table>
+
+<h3><a href="#table-of-content">6. Recursion and Iteration</a></h3>
+<p>Recursion is easy to understand and implement. However, it's worse than iteration and can cause stackoverflows</p>
+
+<p>Fibonacci using bad recursion</p>
+```java
+public static int fib(int n){
+	if(n <= 1)
+		return n;					//base case
+	else
+		return fib(n-1) + fib(n-2);	//recursive case
+}
+```
+
+<p>Fibonacci using tail recursion</p>
+```java
+public static int fibHelper(int start, int end, int prev, int current){
+	if(start == end)
+		return current;
+	else
+		return fibHelper(++start, end, current, current + prev);
+}
+
+public static int fib(int n){
+	if(n <= 1)
+		return n;
+	else 
+		return fibHelper(0,n,0,1);
+}
+```
+
+<p>Fibonacci using iteration</p>
+```java
+public static int fib(int n) {
+ 
+	if (n <= 1){
+		return n;
+	}
+ 
+	int current = 1;
+	int prev = 0;
+	int temp = 0;
+ 
+	for (int i = 2; i <= n; i++) {
+		temp = current + prev;	//compute fib at pos n
+		prev = current;			//old current is now prev
+		current = temp;			//current is temp
+	}
+ 
+	return current;
+}
+```
 
