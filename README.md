@@ -185,29 +185,82 @@ class GraphNode{
 ```
 
 <h3><a href="#table-of-content">5. Sorting</a></h3>
-<p>Here is a table of sorting algorithms and their time complexity</p>
+<p>Here is a table of comparison sorting algorithms and their time complexity</p>
 
 <table>
 	<tr>
 		<td>Algorithm</td>
+		<td>Average Time</td>
+		<td>Worst Time</td>
+		<td>Space</td>
+		<td>Comments</td>
 	</tr>
 	<tr>
+		<td>Bubble sort</td>
+		<td>n^2</td>
+		<td>n^2</td>
+		<td>1</td>
+		<td>It's easy to implement</td>
+	</tr>
+	<tr>
+		<td>Insertion sort</td>
+		<td>n^2</td>
+		<td>n^2</td>
+		<td></td>
 		<td></td>
 	</tr>
 	<tr>
+		<td>Selection sort</td>
+		<td>n^2</td>
+		<td>n^2</td>
+		<td>1</td>
 		<td></td>
 	</tr>
 	<tr>
+		<td>Heap sort</td>
+		<td>n log(n)</td>
+		<td>n log(n)</td>
+		<td></td>
 		<td></td>
 	</tr>
 	<tr>
+		<td>Merge sort</td>
+		<td>n log(n)</td>
+		<td>n log(n)</td>
+		<td>a lot</td>
 		<td></td>
 	</tr>
 	<tr>
+		<td>Quick sort</td>
+		<td>n log(n)</td>
+		<td>n^2</td>
 		<td></td>
+		<td>In practice, is fastest</td>
+	</tr>
+</table>
+
+<p>Here is a table of algorithms that do not use comparison</p>
+<table>
+	<tr>
+		<td>Algorithm</td>
+		<td>Average Time</td>
+		<td>Worst Time</td>
+		<td>Space</td>
+		<td>Comments</td>
 	</tr>
 	<tr>
+		<td>Bucket sort</td>
+		<td>n</td>
+		<td>n + N</td>
 		<td></td>
+		<td>n is the range of keys, N is size of array</td>
+	</tr>
+	<tr>
+		<td>Radix sort</td>
+		<td>n + N</td>
+		<td>m(n + N)</td>
+		<td></td>
+		<td>m is the number of keys</td>
 	</tr>
 </table>
 
