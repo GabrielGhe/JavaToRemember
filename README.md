@@ -7,7 +7,7 @@ Taken from here... <a>http://www.programcreek.com/2012/11/top-10-algorithms-for-
 <h3 id="tableOfContent">Table of content</h3>
 <ul>
   <li><a href="#string">String</a></li>
-  <li><a href="#linkedList">Linked List</a></li>
+  <li><a href="#linked-list">Linked List</a></li>
   <li>Tree</li>
   <li>Graph</li>
   <li>Sorting</li>
@@ -18,7 +18,7 @@ Taken from here... <a>http://www.programcreek.com/2012/11/top-10-algorithms-for-
   <li>Combinations and Permutations</li>
 </ul>
 
-<h3 id="string"><a href="#tableOfContent">String</a></h3>
+<h3 id="string"><a href="#table-of-content">String</a></h3>
 ```java
 toCharyArray()                //get char array of a String
 Arrays.sort()                 //sort an array
@@ -28,7 +28,7 @@ length()                      //string length
 length                        //array size
 ```
 
-<h3 id="linkedList"><a href="#tableOfContent">Linked List</a></h3>
+<h3><a href="#table-of-content">Linked List</a></h3>
 
 <p>The node class which is the "element" of a linked list</p>
 ```java
@@ -127,3 +127,4 @@ class Queue {
   }
 }
 ```
+
