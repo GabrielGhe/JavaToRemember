@@ -334,7 +334,7 @@ public static int fib(int n){
 	if(n <= 1)
 		return n;
 	else 
-		return fibHelper(0,n,0,1);
+		return fibHelper(1,n,0,1);
 }
 ```
 
