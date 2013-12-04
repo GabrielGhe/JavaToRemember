@@ -28,7 +28,9 @@ Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-
 <h3 id="string"><a href="#table-of-content">1. String</a></h3>
 ```java
 toCharyArray()                //get char array of a String
+Collections.sort()	      //sorts a LIST
 Arrays.sort()                 //sort an array
+Collections.reverse()	      //sorts a LIST
 Arrays.toString(char[] a)     //convert to string
 charAt(int x)                 //get a char at the specific index
 length()                      //string length
