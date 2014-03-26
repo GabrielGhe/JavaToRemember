@@ -16,6 +16,7 @@ Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-
   <li><a href="#8-bit-manipulation">Bit Manipulation</a></li>
   <li><a href="#9-probability">Probability</a></li>
   <li><a href="#10-combinations-and-permutations">Combinations and Permutations</a></li>
+  <li><a href="#11-files">Files</a></li>
 </ol>
 
 <!-- 
@@ -490,5 +491,39 @@ public static double caculateProbability(int n){
 	<li>If the order doesn't matter, it is a Combination... 1234 same as 4321</li>
 	<li>If the order matters, it is a Permutation... 1234 != 2134</li>
 </ul>
+
+
+<h3><a href="#table-of-content">11. Files</a></h3>
+
+<p>Writing to a file.</p>
+```java
+//java7... the boolean second parameter is for appending (if true)
+try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("myText.txt", true)))){
+	out.println(output);
+} catch(IOException ioe) {
+	ioe.printStackTrace();
+}
+
+//older java
+try{
+	PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("myText.txt",true)));
+	out.println(output);
+} catch(IOException ioe){
+	ioe.printStackTrace();
+} finally {
+	out.close();
+}
+```
+
+<p>Reading from a file</p>
+```java
+//read all the lines in a file
+try {
+	List<String> fileLines = Files.readAllLines(Paths.get(fname), StandardCharsets.UTF_8);
+} catch (IOException e) {
+	e.printStackTrace();
+}
+```
+
 
 
