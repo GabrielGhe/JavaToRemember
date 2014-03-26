@@ -560,12 +560,14 @@ String answer = input.readLine();
 ```
 
 <h3><a href="#table-of-content">13. Regex</a></h3>
+<p>
+The full documentation can be found here 
+<a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">
+Docs
+</a>
+</p>
 
 ```java
-/*
-Everything can be found here
-http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
-*/
 
 //Long way, that can be reused
 Pattern p = Pattern.compile("a*b");
