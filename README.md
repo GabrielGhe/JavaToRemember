@@ -17,6 +17,7 @@ Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-
   <li><a href="#9-probability">Probability</a></li>
   <li><a href="#10-combinations-and-permutations">Combinations and Permutations</a></li>
   <li><a href="#11-files">Files</a></li>
+  <li><a href="#12-sockets">Sockets</a></li>
 </ol>
 
 <!-- 
@@ -523,6 +524,36 @@ try {
 } catch (IOException e) {
 	e.printStackTrace();
 }
+```
+
+<h3><a href="#table-of-content">12. Sockets</a></h3>
+
+<p>Server that listens for a connection, writes the date and closes connection</p>
+```java
+//Server
+ServerSocket listener = new ServerSocket(9090);
+try {
+    while (true) {
+        Socket socket = listener.accept();
+        try {
+            PrintWriter out =
+                new PrintWriter(socket.getOutputStream(), true);
+            out.println(new Date().toString());
+        } finally {
+            socket.close();
+        }
+    }
+}
+finally {
+    listener.close();
+}
+
+
+//Client
+Socket s = new Socket(serverAddress, 9090);
+BufferedReader input =
+    new BufferedReader(new InputStreamReader(s.getInputStream()));
+String answer = input.readLine();
 ```
 
 
