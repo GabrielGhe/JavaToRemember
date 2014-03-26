@@ -18,6 +18,7 @@ Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-
   <li><a href="#10-combinations-and-permutations">Combinations and Permutations</a></li>
   <li><a href="#11-files">Files</a></li>
   <li><a href="#12-sockets">Sockets</a></li>
+  <li><a href="#13-regex">Regex</a></li>
 </ol>
 
 <!-- 
@@ -554,7 +555,235 @@ Socket s = new Socket(serverAddress, 9090);
 BufferedReader input =
     new BufferedReader(new InputStreamReader(s.getInputStream()));
 String answer = input.readLine();
+
+//On mac, you can open a terminal and write "nc localhost 9090" to connect to server socket
 ```
+
+<h3><a href="#table-of-content">13. Regex</a></h3>
+
+```java
+/*
+Everything can be found here
+http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
+*/
+
+//Long way, that can be reused
+Pattern p = Pattern.compile("a*b");
+Matcher m = p.matcher("aaaab");
+boolean b = m.matches();
+
+//shorthand
+boolean b = Pattern.matches("a*b", "aaaaab");
+```
+
+<p><b>Regular-expression constructs</b></p>
+<table>
+	<tr>
+		<td>[abc]</td>
+		<td>a, b, or c (simple class)</td>
+	</tr>
+	
+	<!-- 2 -->
+	<tr>
+		<td>
+			[^abc]
+		</td>
+		<td>
+			Any character except a, b, or c (negation)
+		</td>
+	</tr>
+	
+	<!-- 3 -->
+	<tr>
+		<td>
+			[a-zA-Z]
+		</td>
+		<td>
+			a through z or A through Z, inclusive (range)
+		</td>
+	</tr>
+	
+	<!-- 4 -->
+	<tr>
+		<td>
+			[a-d[m-p]]
+		</td>
+		<td>
+			a through d, or m through p: [a-dm-p] (union)
+		</td>
+	</tr>
+	
+	<!-- 5 -->
+	<tr>
+		<td>
+			[a-z&&[def]]
+		</td>
+		<td>
+			d, e, or f (intersection)
+		</td>
+	</tr>
+	
+	<!-- 6 -->
+	<tr>
+		<td>
+			[a-z&&[^bc]]
+		</td>
+		<td>
+			a through z, except for b and c: [ad-z] (subtraction)
+		</td>
+	</tr>
+	
+	<!-- 7 -->
+	<tr>
+		<td>
+			[a-z&&[^m-p]]
+		</td>
+		<td>
+			a through z, and not m through p: [a-lq-z](subtraction)
+		</td>
+	</tr>
+</table>
+
+<p><b>Predefined character classes</b></p>
+<table>
+	<!-- 1 -->
+	<tr>
+		<td>
+			.
+		</td>
+		<td>
+			Any character (may or may not match line terminators)
+		</td>
+	</tr>
+	
+	<!-- 2 -->
+	<tr>
+		<td>
+			\d
+		</td>
+		<td>
+			A digit: [0-9]
+		</td>
+	</tr>
+	
+	<!-- 3 -->
+	<tr>
+		<td>
+			\D
+		</td>
+		<td>
+			A non-digit: [^0-9]
+		</td>
+	</tr>
+	
+	<!-- 4 -->
+	<tr>
+		<td>
+			\s
+		</td>
+		<td>
+			A whitespace character: [ \t\n\x0B\f\r]
+		</td>
+	</tr>
+	
+	<!-- 5 -->
+	<tr>
+		<td>
+			\S
+		</td>
+		<td>
+			A non-whitespace character: [^\s]
+		</td>
+	</tr>
+	
+	<!-- 6 -->
+	<tr>
+		<td>
+			\w
+		</td>
+		<td>
+			A word character: [a-zA-Z_0-9]
+		</td>
+	</tr>
+	
+	<!-- 7 -->
+	<tr>
+		<td>
+			\W
+		</td>
+		<td>
+			A non-word character: [^\w]
+		</td>
+	</tr>
+</table>
+
+
+<p><b>Greedy quantifiers</b></p>
+
+<table>
+	<!-- 1 -->
+	<tr>
+		<td>
+			X?
+		</td>
+		<td>
+			X, once or not at all
+		</td>
+	</tr>
+	
+	<!-- 2 -->
+	<tr>
+		<td>
+			X*
+		</td>
+		<td>
+			X, zero or more times
+		</td>
+	</tr>
+	
+	<!-- 3 -->
+	<tr>
+		<td>
+			X+
+		</td>
+		<td>
+			X, one or more times
+		</td>
+	</tr>
+	
+	<!-- 4 -->
+	<tr>
+		<td>
+			X{n}
+		</td>
+		<td>
+			X, exactly n times
+		</td>
+	</tr>
+	
+	<!-- 5 -->
+	<tr>
+		<td>
+			X{n,}
+		</td>
+		<td>
+			X, at least n times
+		</td>
+	</tr>
+	
+	<!-- 6 -->
+	<tr>
+		<td>
+			X{n,m}
+		</td>
+		<td>
+			X, at least n but not more than m times
+		</td>
+	</tr>
+</table>
+
+
+
 
 
 
