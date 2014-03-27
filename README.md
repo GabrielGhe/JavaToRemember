@@ -499,7 +499,7 @@ public static double caculateProbability(int n){
 
 <p>Writing to a file.</p>
 ```java
-//java7... the boolean second parameter is for appending (if true)
+//java7... appends to file
 try(Formatter f = new Formatter("myText.txt")) {
 	f.format("this is output text", null);
 } catch(IOException ioe){
