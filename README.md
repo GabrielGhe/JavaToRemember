@@ -521,9 +521,12 @@ try {
 <p>Reading from a file</p>
 ```java
 //read all the lines in a file
-try {
-	List<String> fileLines = Files.readAllLines(Paths.get(fname), StandardCharsets.UTF_8);
-} catch (IOException e) {
+try(Scanner scan = new Scanner(new File("myText.txt") ) ){
+	ArrayList<String> x = new ArrayList<String>();
+	while(scan.hasNext()){
+		x.add(scan.nextLine());
+	}
+} catch (FileNotFoundException e) {
 	e.printStackTrace();
 }
 ```
