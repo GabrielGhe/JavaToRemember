@@ -500,20 +500,21 @@ public static double caculateProbability(int n){
 <p>Writing to a file.</p>
 ```java
 //java7... the boolean second parameter is for appending (if true)
-try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("myText.txt", true)))){
-	out.println(output);
-} catch(IOException ioe) {
+try(Formatter f = new Formatter("myText.txt")) {
+	f.format("this is output text", null);
+} catch(IOException ioe){
 	ioe.printStackTrace();
 }
 
 //older java
-try{
-	PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("myText.txt",true)));
-	out.println(output);
+Formatter f;
+try {
+	f = new Formatter("myText.txt");
+	f.format("this is output text", null);
 } catch(IOException ioe){
 	ioe.printStackTrace();
 } finally {
-	out.close();
+	f.close();
 }
 ```
 
