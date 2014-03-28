@@ -541,9 +541,9 @@ try {
     while (true) {
         Socket socket = listener.accept();
         try {
-            PrintWriter out =
-                new PrintWriter(socket.getOutputStream(), true);
-            out.println(new Date().toString());
+            ObjectOutputStream out =
+                new ObjectOutputStream(socket.getOutputStream());
+            out.writeObject("Hi there");
         } finally {
             socket.close();
         }
@@ -554,11 +554,15 @@ finally {
 }
 
 
-//Client
+//Client the data is sent through serialization
+//to send objects, they must be serializable
 Socket s = new Socket(serverAddress, 9090);
-BufferedReader input =
-    new BufferedReader(new InputStreamReader(s.getInputStream()));
-String answer = input.readLine();
+try{
+	ObjectInputStream input = new ObjectInputStream(s.getInputStream());
+	String answer = (String)input.readObject();
+} catch(ClassCastException cce){
+	cce.printStackTrace();
+}
 
 //On mac, you can open a terminal and write "nc localhost 9090" to connect to server socket
 ```
