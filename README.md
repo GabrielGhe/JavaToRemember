@@ -562,6 +562,8 @@ try{
 	String answer = (String)input.readObject();
 } catch(ClassCastException cce){
 	cce.printStackTrace();
+} finally {
+	s.close();
 }
 
 //On mac, you can open a terminal and write "nc localhost 9090" to connect to server socket
