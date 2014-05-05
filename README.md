@@ -23,17 +23,17 @@ Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-
 
 <!-- 
 #########################################
-#										#
-#				String					#
-#										#
+#					#
+#		String			#
+#					#
 #########################################
 -->
 <h3 id="string"><a href="#table-of-content">1. String</a></h3>
 ```java
 toCharyArray()                //get char array of a String
-Collections.sort()	      	  //sorts a LIST
+Collections.sort()            //sorts a LIST
 Arrays.sort()                 //sort an array
-Collections.reverse()	      //sorts a LIST
+Collections.reverse()	      //reverses a LIST
 Arrays.toString(char[] a)     //convert to string
 charAt(int x)                 //get a char at the specific index
 length()                      //string length
@@ -42,9 +42,9 @@ length                        //array size
 
 <!-- 
 #########################################
-#										#
-#			Linked list					#
-#										#
+#					#
+#	Linked list			#
+#					#
 #########################################
 -->
 <h3><a href="#table-of-content">2. Linked List</a></h3>
