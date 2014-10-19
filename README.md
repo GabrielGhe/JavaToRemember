@@ -242,6 +242,29 @@ public static Node bfs(Node root, int value) {
 }
 ```
 
+<p>
+	Depth First Search
+</p>
+```java
+public static Node dfs(Node root, int value) {
+	Stack<Node> s = new Stack<Node>();
+	Node returnValue;
+	s.push(root);
+	
+	while (!q.isEmpty()) {
+		Node temp = s.pop();
+		if (temp.value == value) {
+			returnValue = temp;
+			break;
+		}
+		for (Node adj : temp.adjecent) {
+			s.push(adj);
+		}
+	}
+	return returnValue;
+}
+```
+
 
 <!-- 
 #########################################
