@@ -217,6 +217,31 @@ class GraphNode{
 }
 ```
 
+<p>
+	Breath First Search
+</p>
+
+```java
+public static Node bfs(Node root, int value) {
+	// Queue is abstract, use an implementation of queue
+	Queue<Node> q = new Queue<Node>();
+	Node returnValue;
+	q.enqueue(root);
+	
+	while (!q.isEmpty()) {
+		Node temp = q.dequeue();
+		if (temp.value == value) {
+			returnValue = temp;
+			break;
+		}
+		for (Node adj : temp.adjecent) {
+			q.enqueue(adj);
+		}
+	}
+	return returnValue;
+}
+```
+
 
 <!-- 
 #########################################
