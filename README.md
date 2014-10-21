@@ -19,6 +19,7 @@ Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-
   <li><a href="#11-files">Files</a></li>
   <li><a href="#12-sockets">Sockets</a></li>
   <li><a href="#13-regex">Regex</a></li>
+  <li><a href="#14-formating">Formating</a></li>
 </ol>
 
 <!-- 
@@ -842,8 +843,57 @@ boolean b = Pattern.matches("a*b", "aaaaab");
 	</tr>
 </table>
 
+<h3><a href="#table-of-content">14. Formating</a></h3>
+
+<p>
+	Full article can be found <a href="http://examples.javacodegeeks.com/core-java/lang/string/java-string-format-example/"> here</a>
+</p>
+
+<p>
+	Strings
+</p>
+
+<table>
+	<tr>
+		<td>Code</td>
+		<td>Description</td>
+	</tr>
+	<tr>
+		<td>%s</td>
+		<td>will print the string as it is.</td>
+	</tr>
+	<tr>
+		<td>%15s</td>
+		<td>will pint the string as it is. If the string has less than 15 characters, the output will be padded on the left.</td>
+	</tr>
+	<tr>
+		<td>%-6s</td>
+		<td>will pint the string as it is. If the string has less than 6 characters, the output will be padded on the left.</td>
+	</tr>
+	<tr>
+		<td>%.8d</td>
+		<td>will print maximum 8 characters of the string.</td>
+	</tr>
+</table>
 
 
+```java
+// Padding right
+System.out.printf("%10s %10s\n", "hello", "world");
 
+// Padding left
+System.out.printf("%-10s %-10s\n", "hello", "world");
 
+// As is
+System.out.printf("%s %s\n", "hello", "world");
 
+// Max 2 characters
+System.out.printf("%.2s %.2s\n", "hello", "world");
+
+/*
+     hello      world
+hello      world     
+hello world
+he wo    
+*/
+```
