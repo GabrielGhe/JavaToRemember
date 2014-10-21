@@ -850,7 +850,7 @@ boolean b = Pattern.matches("a*b", "aaaaab");
 </p>
 
 <p>
-	Strings
+	<b>Strings</b>
 </p>
 
 <table>
@@ -899,7 +899,7 @@ he wo
 ```
 
 <p>
-	Integers
+	<b>Integers</b>
 </p>
 
 
@@ -924,10 +924,6 @@ he wo
 		<td>%06d</td>
 		<td>will pint the integer as it is. If the number of digits is less than 6, the output will be padded on the left with zeroes.</td>
 	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-	</tr>
 </table>
 
 ```java
@@ -948,5 +944,54 @@ System.out.printf("%010d %010d\n", 12345, 54321);
 12345      54321     
 12345 54321
 0000012345 0000054321
+*/
+```
+
+<p>
+	<b>Floats</b>
+</p>
+
+
+<table>
+	<tr>
+		<td>Code</td>
+		<td>Description</td>
+	</tr>
+	<tr>
+		<td>%f</td>
+		<td>will print the number as it is.</td>
+	</tr>
+	<tr>
+		<td>%15f</td>
+		<td>will pint the number as it is. If the number has less than 15 digits, the output will be padded on the left.</td>
+	</tr>
+	<tr>
+		<td>%.8f</td>
+		<td>will print maximum 8 decimal digits of the number.</td>
+	</tr>
+	<tr>
+		<td>%9.4f</td>
+		<td>will print maximum 4 decimal digits of the number. The output will occupy 9 characters at least. If the number of digits is not enough, it will be padded</td>
+	</tr>
+</table>
+
+```java
+// Padding right
+System.out.printf("%14f %14f\n", 123.456789, 987.654321);
+
+// Padding left
+System.out.printf("%-14f %-14f\n", 123.456789, 987.654321);
+
+// As is
+System.out.printf("%f %f\n", 123.456789, 987.654321);
+
+// 3 digit Precision + left padding 
+System.out.printf("%14.3f %14.3f\n", 123.456789, 987.654321);
+
+/*
+    123.456789     987.654321
+123.456789     987.654321    
+123.456789 987.654321
+       123.457        987.654
 */
 ```
