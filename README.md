@@ -871,17 +871,17 @@ boolean b = Pattern.matches("a*b", "aaaaab");
 		<td>will pint the string as it is. If the string has less than 6 characters, the output will be padded on the left.</td>
 	</tr>
 	<tr>
-		<td>%.8d</td>
+		<td>%.8s</td>
 		<td>will print maximum 8 characters of the string.</td>
 	</tr>
 </table>
 
 
 ```java
-// Padding right
+// Padding left
 System.out.printf("%10s %10s\n", "hello", "world");
 
-// Padding left
+// Padding right
 System.out.printf("%-10s %-10s\n", "hello", "world");
 
 // As is
@@ -895,5 +895,58 @@ System.out.printf("%.2s %.2s\n", "hello", "world");
 hello      world     
 hello world
 he wo    
+*/
+```
+
+<p>
+	Integers
+</p>
+
+
+<table>
+	<tr>
+		<td>Code</td>
+		<td>Description</td>
+	</tr>
+	<tr>
+		<td>%d</td>
+		<td>will print the integer as it is.</td>
+	</tr>
+	<tr>
+		<td>%6d</td>
+		<td>will pint the integer as it is. If the number of digits is less than 6, the output will be padded on the left.</td>
+	</tr>
+	<tr>
+		<td>%-6d</td>
+		<td>will pint the integer as it is. If the number of digits is less than 6, the output will be padded on the right.</td>
+	</tr>
+	<tr>
+		<td>%06d</td>
+		<td>will pint the integer as it is. If the number of digits is less than 6, the output will be padded on the left with zeroes.</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+```java
+// Padding right
+System.out.printf("%10d %10d\n", 12345, 54321);
+
+// Padding left
+System.out.printf("%-10d %-10d\n", 12345, 54321);
+
+// As is
+System.out.printf("%d %d\n", 12345, 54321);
+
+// fill rest of 10 digits with 0s
+System.out.printf("%010d %010d\n", 12345, 54321);
+
+/*
+     12345      54321
+12345      54321     
+12345 54321
+0000012345 0000054321
 */
 ```
