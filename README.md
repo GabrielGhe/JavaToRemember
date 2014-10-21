@@ -927,10 +927,10 @@ he wo
 </table>
 
 ```java
-// Padding right
+// Padding left
 System.out.printf("%10d %10d\n", 12345, 54321);
 
-// Padding left
+// Padding right
 System.out.printf("%-10d %-10d\n", 12345, 54321);
 
 // As is
@@ -976,10 +976,10 @@ System.out.printf("%010d %010d\n", 12345, 54321);
 </table>
 
 ```java
-// Padding right
+// Padding left
 System.out.printf("%14f %14f\n", 123.456789, 987.654321);
 
-// Padding left
+// Padding right
 System.out.printf("%-14f %-14f\n", 123.456789, 987.654321);
 
 // As is
