@@ -20,6 +20,7 @@ Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-
   <li><a href="#12-sockets">Sockets</a></li>
   <li><a href="#13-regex">Regex</a></li>
   <li><a href="#14-formating">Formating</a></li>
+  <li><a href="#15-HashMap">HashMap</a></li>
 </ol>
 
 <!-- 
@@ -994,4 +995,27 @@ System.out.printf("%14.3f %14.3f\n", 123.456789, 987.654321);
 123.456789 987.654321
        123.457        987.654
 */
+```
+
+<h3><a href="#table-of-content">15. HashMap</a></h3>
+
+<p>
+HashMaps & HashTables allow inserts, deletes and gets at O(1).
+HashTables are synchronized while HashMaps are not. HashTables do not allow null keys or values.
+HashMaps allows 1 null key and unlimited null values.
+Source: <a href="http://stackoverflow.com/questions/40471/differences-between-hashmap-and-hashtable">here</a>
+</p>
+
+```java
+HashMap<String, Integer> map = new HashMap<String, Integer>();
+map.put("a", 1); // { a:1 }
+map.put("b", 2); // { a:1, b:2 }
+map.put("c", 3); // { a:1, b:2, c:3 }
+
+map.get("a");    // 1
+map.containsKey("d"); // false
+map.values();    // [1, 2, 3]
+map.keySet();    // ["a", "b", "c"]
+map.remove("a"); // { b:2, c:3 }
+map.clear();     // {}
 ```
