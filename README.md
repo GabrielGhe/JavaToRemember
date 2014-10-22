@@ -865,11 +865,11 @@ boolean b = Pattern.matches("a*b", "aaaaab");
 	</tr>
 	<tr>
 		<td>%15s</td>
-		<td>will pint the string as it is. If the string has less than 15 characters, the output will be padded on the left.</td>
+		<td>will print the string as it is. If the string has less than 15 characters, the output will be padded on the left.</td>
 	</tr>
 	<tr>
 		<td>%-6s</td>
-		<td>will pint the string as it is. If the string has less than 6 characters, the output will be padded on the left.</td>
+		<td>will print the string as it is. If the string has less than 6 characters, the output will be padded on the left.</td>
 	</tr>
 	<tr>
 		<td>%.8s</td>
@@ -915,15 +915,15 @@ he wo
 	</tr>
 	<tr>
 		<td>%6d</td>
-		<td>will pint the integer as it is. If the number of digits is less than 6, the output will be padded on the left.</td>
+		<td>will print the integer as it is. If the number of digits is less than 6, the output will be padded on the left.</td>
 	</tr>
 	<tr>
 		<td>%-6d</td>
-		<td>will pint the integer as it is. If the number of digits is less than 6, the output will be padded on the right.</td>
+		<td>will print the integer as it is. If the number of digits is less than 6, the output will be padded on the right.</td>
 	</tr>
 	<tr>
 		<td>%06d</td>
-		<td>will pint the integer as it is. If the number of digits is less than 6, the output will be padded on the left with zeroes.</td>
+		<td>will print the integer as it is. If the number of digits is less than 6, the output will be padded on the left with zeroes.</td>
 	</tr>
 </table>
 
@@ -964,7 +964,7 @@ System.out.printf("%010d %010d\n", 12345, 54321);
 	</tr>
 	<tr>
 		<td>%15f</td>
-		<td>will pint the number as it is. If the number has less than 15 digits, the output will be padded on the left.</td>
+		<td>will print the number as it is. If the number has less than 15 digits, the output will be padded on the left.</td>
 	</tr>
 	<tr>
 		<td>%.8f</td>
