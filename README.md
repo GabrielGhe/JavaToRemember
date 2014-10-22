@@ -20,7 +20,7 @@ Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-
   <li><a href="#12-sockets">Sockets</a></li>
   <li><a href="#13-regex">Regex</a></li>
   <li><a href="#14-formating">Formating</a></li>
-  <li><a href="#15-HashMap">HashMap</a></li>
+  <li><a href="#15-hashmap">HashMap</a></li>
 </ol>
 
 <!-- 
