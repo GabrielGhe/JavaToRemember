@@ -245,7 +245,8 @@ public static Node bfs(Node root, int value) {
 ```
 
 <p>
-	Depth First Search
+	Depth First Search (live implementation from MIT <a href="http://www.youtube.com/watch?v=AfSk24UTFS8&t=250">here</a>)
+	
 </p>
 ```java
 public static Node dfs(Node root, int value) {
