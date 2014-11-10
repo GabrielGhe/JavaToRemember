@@ -545,6 +545,26 @@ public static double caculateProbability(int n){
 	<li>If the order matters, it is a Permutation... 1234 != 2134</li>
 </ul>
 
+<p>Permutation</p>
+```java
+public static void perm(int[] list, int pos){
+	if (pos == list.length) {
+		System.out.println( Arrays.toString(list) );
+	} else {
+		for(int i=pos; i < list.length; ++i){
+			swap(list, i, pos);
+			perm(list, pos + 1);
+			swap(list, i, pos);
+		}
+	}
+}
+
+public static final <T> void swap (T[] a, int i, int j) {
+  T t = a[i];
+  a[i] = a[j];
+  a[j] = t;
+}
+```
 
 <h3><a href="#table-of-content">11. Files</a></h3>
 
