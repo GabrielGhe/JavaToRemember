@@ -432,7 +432,7 @@ public static int fib(int n) {
 <p>The problem of climbing steps perfectly fit those 4 properties. Therefore, it can be solve by using dynamic programming.</p>
 
 ```java
-public static int[] Steps = new int[100];
+public static int[] A = new int[100];
  
 public static int f3(int n) {
 	if (n <= 2)
