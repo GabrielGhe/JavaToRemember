@@ -32,7 +32,7 @@ Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-
 -->
 <h3 id="string"><a href="#table-of-content">1. String</a></h3>
 ```java
-toCharArray()                //get char array of a String
+toCharArray()                 //get char array of a String
 Collections.sort()            //sorts a LIST
 Arrays.sort()                 //sort an array
 Collections.reverse()	      //reverses a LIST
