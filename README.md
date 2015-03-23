@@ -184,7 +184,7 @@ class TreeNode {
 #########################################
 -->
 <h3><a href="#table-of-content">4. Graph</a></h3>
-<p>Graphs are use for many things, such as Netorking and games for example.The 2 most famous algorithms for graphs are Depth First Search and Breath First Search</p>
+<p>Graphs are used for many things, such as Networking and games.The 2 most famous algorithms for graphs are Depth First Search and Breath First Search</p>
 
 <p>GraphNode</p>
 ```java
