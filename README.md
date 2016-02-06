@@ -1,6 +1,8 @@
 JavaToRemember
 =================
-Things to remember for java
+Things to remember for java.
+
+[This post](http://gabrielghe.github.io/java/2015/02/07/java-to-remember) and many others can be found on my blog at [GabrielGhe.github.io](http://gabrielghe.github.io).
 
 Credits to source article here... <a>http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/</a>
 
